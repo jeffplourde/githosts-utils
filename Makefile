@@ -3,10 +3,10 @@ TEST_PATTERN?=.
 TEST_OPTIONS?=-race -v
 
 setup:
-	go get -u github.com/alecthomas/gometalinter
+#	go get -u github.com/alecthomas/gometalinter
 	go get -u golang.org/x/tools/cmd/cover
 	go get -u github.com/dave/courtney
-	gometalinter --install --update
+#	gometalinter --install --update
 
 test:
 	echo 'mode: atomic' > coverage.txt && go list ./... | grep -v testing.go | xargs -n1 -I{} sh -c 'go test -v -failfast -p 1 -parallel 1 -timeout=600s -covermode=atomic -coverprofile=coverage.tmp {} && tail -n +2 coverage.tmp >> coverage.txt' && rm coverage.tmp

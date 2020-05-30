@@ -145,7 +145,7 @@ func bitBucketWorker(user, token, backupDIR string, jobs <-chan repository, resu
 }
 
 func (provider bitbucketHost) Backup(backupDIR string) {
-	maxConcurrent := 5
+	maxConcurrent := 1
 
 	tr := &http.Transport{
 		MaxIdleConns:       maxIdleConns,

@@ -1,6 +1,6 @@
 # githost-utils: a go library for working with hosted git providers
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/jonhadfield/githost-utils)](https://goreportcard.com/report/github.com/jonhadfield/githost-utils)
+[![Go Report Card](https://goreportcard.com/badge/github.com/jeffplourde/githost-utils)](https://goreportcard.com/report/github.com/jeffplourde/githost-utils)
 
 #### Supported OSes
 
