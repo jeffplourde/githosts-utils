@@ -81,7 +81,7 @@ func (provider bitbucketHost) describeRepos() (dRO describeReposOutput) {
 	rawRequestURL := &requestURL
 
 	for rawRequestURL != nil {
-
+		logger.Println("Launching a new request")
 		req, errNewReq := http.NewRequest(http.MethodGet, *rawRequestURL, nil)
 		if errNewReq != nil {
 			logger.Fatal(errNewReq)
@@ -124,6 +124,8 @@ func (provider bitbucketHost) describeRepos() (dRO describeReposOutput) {
 		}
 		rawRequestURL = respObj.Next
 	}
+
+	logger.Println(fmt.Sprintf("%d repos", len(repos)))
 
 	return describeReposOutput{
 		Repos: repos,
