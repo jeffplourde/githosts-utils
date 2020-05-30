@@ -1,4 +1,4 @@
-module github.com/jonhadfield/githosts-utils
+module github.com/jeffplourde/githosts-utils
 
 go 1.12
 
